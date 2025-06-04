@@ -9,11 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.8.2"
+    "@astrojs/react": "^4.3.0",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "astro": "^5.8.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "description": "```sh npm create astro@latest -- --template basics ```",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Igalche/Herramientas.git"
