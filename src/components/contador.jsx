@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useStore } from '@nanostores/react';
+import { contador, incrementar } from '../stores/contador';
 import { esquemaUsuario } from '../utils/validacion';
 
 export default function Contador() {
-  const [contador, setContador] = useState(0);
+  const valor = useStore(contador);
 
   function manejarClick() {
-    const datos = { nombre: 'Juan', edad: contador };
+    const datos = { nombre: 'Juan', edad: valor };
     const resultado = esquemaUsuario.safeParse(datos);
 
     if (resultado.success) {
@@ -14,14 +15,14 @@ export default function Contador() {
       console.log('❌ Datos inválidos:', resultado.error.errors);
     }
 
-    setContador(contador + 1);
+    incrementar(); // actualiza el contador global
   }
 
   return (
     <div className="p-4 space-y-2">
-      <p className="text-lg">Contador: {contador}</p>
+      <p className="text-lg">Contador global: {valor}</p>
       <button className="btn btn-primary" onClick={manejarClick}>
-        Incrementar usando componente react
+        Incrementar con validación
       </button>
     </div>
   );
