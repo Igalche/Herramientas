@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/Igalche/Herramientas/issues"
   },
-  "homepage": "https://github.com/Igalche/Herramientas#readme"
+  "homepage": "https://github.com/Igalche/Herramientas#readme",
+  "devDependencies": {
+    "daisyui": "^5.0.43"
+  }
 }
