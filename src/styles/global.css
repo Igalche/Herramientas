@@ -1,2 +1,4 @@
+/* Importa los estilos base y utilidades de Tailwind CSS */
 @import "tailwindcss";
+/* Activa el plugin DaisyUI, que proporciona componentes UI preconstruidos para Tailwind, el Warning es por VScode, ya que tailwindcss V4 o superior si soporta @plugin*/
 @plugin "daisyui";
