@@ -1,4 +1,6 @@
 ---
+import Contador from '../components/contador';
+import Formulario from '../components/formulario';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
@@ -13,5 +15,7 @@ import "../styles/global.css";
   <button class="btn btn-warning mb-4">Botón DaisyUI</button>
 <div class="alert alert-success">¡Todo salió bien!</div>
 <input type="text" placeholder="Nombre" class="input input-bordered" />
+ <Contador client:load />
+     <Formulario client:load />
   <Welcome />
 </Layout>
